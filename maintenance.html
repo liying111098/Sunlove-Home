@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sunlove Home</title>
+<meta name="description" content="Sunlove Home is a charitable Home for the intellectually-disabled. We are committed to sheltering, protecting and caring for those entrusted to us.">
+<meta name="keywords" content="mentally-disabled, intellectually-disabled, home, centre, daycare, dementia, autism, elderly, training, teens, courses, volunteer, donate">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome-4.6.3 2/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+<div id="wrappermaintenance">
+   <div id="header">
+     	<div id="logo">
+        	<a href="index.html"><img src="images/logo.png" width="450" height="150" alt="Sunlove Home Logo"/></a>
+        </div>
+        <div id="slogan"></div>
+	</div>
+	<div id="mainnavibox">
+	  <div id="mainnavi">
+        	<ul>
+            	<li class="cheatcode"><a href="index.html">Home</a></li>
+            	<li><a href="maintenance.html">About Us</a></li>
+                <li><a href="ourservices.html">Our Services</a>
+                	<ul>
+                        <li><a href="maintenance.html">Home Assistance</a></li>
+                        <li><a href="maintenance.html">Help Centres</a></li>
+                        <li><a href="maintenance.html">Courses</a></li>
+                        <li><a href="maintenance.html">Health Screening</a></li>
+						<li><a href="maintenance.html">Mobile Services</a></li>
+                  </ul>
+			  	</li>        
+              	<li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="maintenance.html">Donate</a></li>
+           	  	<li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+	  </div>
+	</div>
+   	<div id="maintenance">
+    	<div id="maintenancecontainer">
+        	<img src="images/tools.png" width="120" height: "120" alt="construction tools"/>
+        	<h1>The page is still under construction.</h1>
+            <h6>Sorry for any inconvenience caused.</h6>
+    	</div>
+    </div>
+    <div id="footer">
+    		<h4>&copy;Copyright 2016. All rights reserved. Sunlove Home. </h4>
+	</div>	
+    <div class="stickrightmenu">
+        <div class="item">
+            <a class="link icon_web"></a>
+            <div class="item_content">
+                <h2>Social Media</h2>
+                <p>
+                    <a href="https://www.facebook.com/pages/Sunlove-Nursing-Home/230889506921614" target="_blank">Facebook</a>
+                    <a href="https://www.youtube.com/watch?v=HUZ1f5HPTCE" target="_blank">Youtube</a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <a class="link icon_search"></a>
+            <div class="item_content">
+                <h2>Search</h2>
+                <p>
+                    <input type="text" placeholder="Find what you want"/> 
+                    <a href ="#">Go</a>
+                </p> 
+            </div>
+      	</div>
+	</div>
+</div> 
+
+<!-- mainnavi transparency -->
+<script>
+    $(document).ready(function(){
+      $(window).scroll(function() { 
+        if ($(document).scrollTop() >150) { 
+		  $("#mainnavi").css("background", "rgb(230, 148, 32, )");
+		  $("#mainnavi").css("background", "rgba(247, 148, 32, 0.8)");
+        } else {
+          $("#mainnavi").css("background-color","#FCA900");
+        }
+      });
+    });
+</script>
+<!-- end mainnavi transparency -->
+
+
+<!-- mainnavi sticky -->
+<script>
+$(document).ready(function() {
+var stickyNavTop = $('#mainnavi').offset().top;
+ 
+var stickyNav = function(){
+var scrollTop = $(window).scrollTop();
+      
+if (scrollTop > stickyNavTop) { 
+    $('#mainnavi').addClass('sticky');
+} else {
+    $('#mainnavi').removeClass('sticky'); 
+}
+};
+ 
+stickyNav();
+ 
+$(window).scroll(function() {
+    stickyNav();
+});
+});
+</script>
+<!-- end mainnavi sticky -->
+
+<!-- right sticky menu expansion -->
+<script>
+            $('.item').hover(
+                function(){
+                    var $this = $(this);
+                    expand($this);
+                },
+                function(){
+                    var $this = $(this);
+                    collapse($this);
+                }
+            );
+            function expand($elem){
+                
+                $elem.stop().animate({width:'250px'}, 1000)
+                .find('.item_content').fadeIn(400,function(){
+                    $(this).find('p').stop(true,true).fadeIn(600);
+                });
+            }
+            function collapse($elem){
+               
+                $elem.stop().animate({width:'42px'}, 1000)
+                .find('.item_content').stop(true,true).fadeOut().find('p').stop(true,true).fadeOut();
+            }
+</script> 
+<!-- end right sticky menu expansion -->
+
+</body>
+</html>
